@@ -21,5 +21,14 @@ private:
 	int multiple_;
 };
 
+class AtleastOneOfDigitRule : public Rule
+{
+public:
+	AtleastOneOfDigitRule(std::string word, int digit);
+	std::string Apply(int n) override;
+private:
+	int digit_;
+};
+
 #endif // !FLEXIBLEFIZZBUZZCPP_RULE_H_
 
