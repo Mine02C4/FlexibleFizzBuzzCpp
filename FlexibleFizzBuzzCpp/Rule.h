@@ -30,5 +30,13 @@ private:
 	int digit_;
 };
 
+class AllDigitsSameRule : public Rule
+{
+public:
+	AllDigitsSameRule(std::string word);
+	std::string Apply(int n) override;
+private:
+};
+
 #endif // !FLEXIBLEFIZZBUZZCPP_RULE_H_
 

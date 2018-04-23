@@ -34,3 +34,24 @@ std::string AtleastOneOfDigitRule::Apply(int n)
 	}
 	return result;
 }
+
+AllDigitsSameRule::AllDigitsSameRule(std::string word)
+{
+	word_ = word;
+}
+
+std::string AllDigitsSameRule::Apply(int n)
+{
+	std::string result = "";
+	auto num_str = std::to_string(n);
+	auto c = num_str[0];
+	for (int i = 1; i < num_str.length(); i++) {
+		if (num_str[1] != c) {
+			break;
+		}
+		if (i == num_str.length() - 1) {
+			result += word_;
+		}
+	}
+	return result;
+}
